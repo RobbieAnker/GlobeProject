@@ -11,6 +11,14 @@ function initialize() {
 	var windowWidth = $(window).width();
 	$(window).resize(function() {windowWidth = $(window).width();});
 	
+	// Add a marker for info, bin a pop up to it, and make it pop up
+	var InfoMarker = WE.marker([-40,-150], "invisible").addTo(earth);
+	InfoMarker.bindPopup("<center style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:250%;color:#C34A14'>\
+		Rotate the globe and select a marker for information</center>\
+		<a href='more-info/europe.html' style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:20px;color:#04344A'>View more information</a>", screen.width*0.6);
+	InfoMarker.openPopup();
+	earth.setView([-10.0, -150])
+	
 	// Add a marker for Europe
 	var EuropeMarker = WE.marker([47.7516, 1.6751]).addTo(earth);
 	// Create pop-up
@@ -91,6 +99,7 @@ function initialize() {
 		MiamiMarker.closePopup();
 		AmazonMarker.closePopup();
 		AntarcticaMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 		
 	SaharaMarker.on('click', function(e){
@@ -100,6 +109,7 @@ function initialize() {
 		MiamiMarker.closePopup();
 		AmazonMarker.closePopup();
 		AntarcticaMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 		
 	AustraliaMarker.on('click', function(e){
@@ -109,6 +119,7 @@ function initialize() {
 		MiamiMarker.closePopup();
 		AmazonMarker.closePopup();
 		AntarcticaMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 		
 	BangladeshMarker.on('click', function(e){
@@ -118,6 +129,7 @@ function initialize() {
 		MiamiMarker.closePopup();
 		AmazonMarker.closePopup();
 		AntarcticaMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 		
 	MiamiMarker.on('click', function(e){
@@ -127,6 +139,7 @@ function initialize() {
 		BangladeshMarker.closePopup();
 		AmazonMarker.closePopup();
 		AntarcticaMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 		
 	AmazonMarker.on('click', function(e){
@@ -136,6 +149,7 @@ function initialize() {
 		BangladeshMarker.closePopup();
 		MiamiMarker.closePopup();
 		AntarcticaMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 		
 	AntarcticaMarker.on('click', function(e){
@@ -145,5 +159,6 @@ function initialize() {
 		BangladeshMarker.closePopup();
 		MiamiMarker.closePopup();
 		AmazonMarker.closePopup();
+		InfoMarker.closePopup();
 	});
 }
