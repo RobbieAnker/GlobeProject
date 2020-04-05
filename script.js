@@ -14,7 +14,7 @@ function initialize() {
 	// Add a marker for info, bin a pop up to it, and make it pop up
 	var InfoMarker = WE.marker([-40,-150], "invisible").addTo(earth);
 	InfoMarker.bindPopup("<center style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:250%;color:#C34A14'>\
-		Rotate the globe and select a marker for information</center>");
+		Rotate the globe and select a marker for information about climate change</center>", screen.width*0.6);
 	InfoMarker.openPopup();
 	earth.setView([-10.0, -150])
 	
