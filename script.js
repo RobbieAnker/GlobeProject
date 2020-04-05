@@ -14,8 +14,7 @@ function initialize() {
 	// Add a marker for info, bin a pop up to it, and make it pop up
 	var InfoMarker = WE.marker([-40,-150], "invisible").addTo(earth);
 	InfoMarker.bindPopup("<center style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:250%;color:#C34A14'>\
-		Rotate the globe and select a marker for information</center>\
-		<a href='more-info/europe.html' style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:20px;color:#04344A'>View more information</a>", screen.width*0.6);
+		Rotate the globe and select a marker for information</center>;
 	InfoMarker.openPopup();
 	earth.setView([-10.0, -150])
 	
