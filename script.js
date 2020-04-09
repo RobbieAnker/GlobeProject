@@ -33,7 +33,7 @@ function initialize() {
 	var SaharaMarker = WE.marker([23.4162, 13.0]).addTo(earth);
 	// Create pop-up
 	SaharaMarker.bindPopup("<center style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:250%;color:#C34A14'>\
-		<b>Sahara Desert:</b> The Sahara desert has grown by 10%</center>\
+		<b>Sahara Desert:</b> The Sahara desert has swelled by 10%</center>\
 		<a href='more-info/sahara.html' type='button' style='font-family:Century Gothic, Arial, Helvetica, sans-serif;font-size:20px;color:#04344A'>View more information</a>", screen.width*0.6);
 		
 		 //<button type='button' style='font-family:Century Gothic;font-size:20px;color:#04344A'>Justification</button>
