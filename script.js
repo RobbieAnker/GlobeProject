@@ -1,10 +1,13 @@
 function initialize() {
 	var options = {atmosphere: true, center: [0, 0], zoom: 0};
 	var earth = new WE.map('earth_div', options);
-	WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg', {
+	WE.tileLayer(/*'http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg'*/'https://webglearth.github.io/webglearth2-offline/{z}/{x}/{y}.jpg', {
+		tileSize: 256,
+        	bounds: [[-85, -180], [85, 180]],
 		minZoom: 0,
 		maxZoom: 5,
-		attribution: 'NASA'
+		attribution: 'NASA',
+		tms: true
 	}).addTo(earth);
 	
 	// Get the width of the window
